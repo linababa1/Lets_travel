@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapls.com/css2?family=montserrat:wght@300;400;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", "sans-serif"
+}
+
+:root{
+    --primaryColor: hsl(233, 52%, 15%);
+    --secColor: hsl(233, 16%, 44%);
+    --hoverColor: hsl(0, 100%, 70%);
+    --blackColor: #707070;
+    --greyText: hsl(0, 0%, 75%);
+    --bgColor: hsl(0, 0%, 100%);
+    --shadowColor: hsla(0, 0%, 0%, 0.314);
+    --gradient: linear-gradient(to bottom, hsl(16, 100%, 71%), hsl(8, 10%, 70%));
+    --box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px 3px, rgba(0, 0, 0, 0.05) 0px 4px 6px 3px;
+    --borderRadius: 14px;
+
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 2.2rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: 0.938rem;
+    --smallFontSize: 0.813rem;
+    --smallestFontSize: 0.75rem;
+}
+
+.Destinations{
+    .secHeader{
+        text-align: center;
+    }
+
+    .secContainer{
+        gap: 2rem;
+        margin-top: 2rem;
+
+        .singleCard{
+            text-align: center;
+            border-radius: var(--borderRadius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+
+            .imgDiv{
+                height:290px;
+                width: 100%;
+                overflow: hidden;
+
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    &:hover{
+                        scale: 1.1;
+                        transition: all .4s ease-in-out;
+                    }
+                }
+            }
+
+            .infoDiv{
+                padding:0 1rem 1.1rem;
+                .upperSpan{
+                    justify-content: space-between;
+                    font-size: var(--h3FontSize);
+                    font-weight: 600;
+                    color: var(--secColor);
+                }
+                .lowerSpan{
+                    padding-top: 1.1rem;
+                    .icon{
+                        font-size: 15px;
+                        margin-right: 1rem;
+                        color: var(--primaryColor);
+                    }
+                    .distance{
+                        font-weight: 300;
+                        font-size: var(--h3FontSize);
+                        color: var(--secColor);
+                    }
+                }
+            }
+            
+            &:hover{
+                box-shadow: var(--box-shadow);
+                transition: all .4s ease-in-out;
+            }
+        }
+    }
+}

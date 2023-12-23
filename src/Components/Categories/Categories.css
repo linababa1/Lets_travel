@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapls.com/css2?family=montserrat:wght@300;400;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", "sans-serif"
+}
+
+:root{
+    --primaryColor: hsl(233, 52%, 15%);
+    --secColor: hsl(233, 16%, 44%);
+    --hoverColor: hsl(0, 100%, 70%);
+    --blackColor: #707070;
+    --greyText: hsl(0, 0%, 75%);
+    --bgColor: hsl(0, 0%, 100%);
+    --shadowColor: hsla(0, 0%, 0%, 0.314);
+    --gradient: linear-gradient(to bottom, hsl(16, 100%, 71%), hsl(8, 10%, 70%));
+    --box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px 3px, rgba(0, 0, 0, 0.05) 0px 4px 6px 3px;
+    --borderRadius: 14px;
+
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 2.2rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: 0.938rem;
+    --smallFontSize: 0.813rem;
+    --smallestFontSize: 0.75rem;
+}
+
+.Categories{
+    .secHeader{
+        text-align: center;
+    }
+
+    .secContainer{
+       gap: 1rem;
+       .singleCard{
+        text-align: center;
+        padding: 2rem;
+        border-radius: var(--borderRadius);
+        gap: 1rem;
+        height:100%;
+
+        .imgDiv{
+            position: relative;
+            width: 90%;
+            justify-content: center;
+            align-items: center;
+            margin: 1rem auto;
+
+            .mainImage{
+                width: 60px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: auto;
+            }
+        }
+        .span{
+            font-size: var(--h3FontSize);
+            font-weight: 600;
+            color: var(--primaryColor);
+        }
+        .p{
+            max-width: 50%;
+            text-align: center;
+            margin: auto;
+            font-weight: 500;
+            color: var(--secColor);
+            line-height: 23px;
+            font-size: var(--h3FontSize);
+        }
+
+        &:hover{
+            box-shadow: var(--box-shadow);
+            transition: all .4s ease-in-out;
+        }
+       }
+    }
+}
